@@ -39,10 +39,9 @@ export default function AmbassadorGallery() {
 
   // Contextual descriptions for gallery images
   const galleryDescriptions = [
-    'Meet our ambassadors from around the world',
+    '',
     'Real people using Scallop in their daily lives',
     'Community leaders driving Web3 adoption',
-    'Creators building the future of finance',
   ];
 
   return (
@@ -97,11 +96,13 @@ export default function AmbassadorGallery() {
                   </div>
                 </div>
                 {/* Text content below image */}
-                <div className={`${widthClass} ${offsetClass} text-center`}>
-                  <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
-                    {galleryDescriptions[idx] || 'Scallop Ambassador'}
-                  </p>
-                </div>
+                {galleryDescriptions[idx] && (
+                  <div className={`${widthClass} ${offsetClass} text-center`}>
+                    <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
+                      {galleryDescriptions[idx]}
+                    </p>
+                  </div>
+                )}
               </div>
             );
           })}
