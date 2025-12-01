@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { ambassadorImages } from '@/lib/ambassadorImages';
 
 export default function WhoYouAre() {
-  // Get an image for this section - use one showing multiple people
-  const sectionImage = ambassadorImages[0]; // Use image 1 (or another that shows multiple people)
+  // Get an image for this section - use image 4
+  const sectionImage = ambassadorImages[3]; // Use image 4
 
   const introText = "We look for people who live in Web3 every day and want to bring real utility to their communities. If you enjoy helping others discover better financial tools and you like being part of a growing movement, you will feel at home here.";
 

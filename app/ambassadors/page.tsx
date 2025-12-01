@@ -4,7 +4,6 @@ import Hero from '@/components/sections/Hero';
 import FeatureCards from '@/components/sections/FeatureCards';
 import ImageShowcase from '@/components/sections/ImageShowcase';
 import AmbassadorGallery from '@/components/sections/AmbassadorGallery';
-import TwoColumnSection from '@/components/sections/TwoColumnSection';
 import WhoYouAre from '@/components/sections/WhoYouAre';
 import WhatYouGet from '@/components/sections/WhatYouGet';
 import ApplicationForm from '@/components/sections/ApplicationForm';
@@ -30,7 +29,6 @@ export default function AmbassadorsPage() {
       <ImageShowcase images={showcase1Images} columns={2} />
       <WhatYouGet />
       <AmbassadorGallery />
-      <TwoColumnSection />
       <ApplicationForm />
       <Footer />
     </main>
