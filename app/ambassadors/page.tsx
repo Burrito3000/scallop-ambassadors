@@ -16,18 +16,18 @@ export default function AmbassadorsPage() {
   // Feature: images 3-4 (already in FeatureCards component)
   // WhoYouAre: image 1 (showing multiple people)
   // WhatYouGet: image 5 (showing woman paying in store)
-  // Showcase 1 (after features): images 5-6
+  // Showcase 1 (after features): image 10 (hero-style real usage shot)
   // Gallery: images 7-10 (4 images)
   
-  const showcase1Images = ambassadorImages.slice(4, 6); // images 5-6
+  const showcase1Images = [ambassadorImages[9]]; // image 10
 
   return (
     <main className="min-h-screen">
       <Navigation />
       <Hero />
+      <WhoYouAre />
       <FeatureCards />
       <ImageShowcase images={showcase1Images} columns={2} />
-      <WhoYouAre />
       <WhatYouGet />
       <AmbassadorGallery />
       <TwoColumnSection />

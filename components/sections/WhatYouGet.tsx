@@ -4,8 +4,8 @@ import Image from 'next/image';
 import { ambassadorImages } from '@/lib/ambassadorImages';
 
 export default function WhatYouGet() {
-  // Get an image for this section - use one showing woman paying in store
-  const sectionImage = ambassadorImages[4]; // Use image 5 (or another that shows woman paying)
+  // Get an image for this section - use the previous second hero image here
+  const sectionImage = ambassadorImages[1]; // Use image 2
 
   const benefits = [
     {

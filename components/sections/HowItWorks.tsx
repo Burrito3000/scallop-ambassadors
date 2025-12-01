@@ -23,7 +23,22 @@ export default function HowItWorks() {
   return (
     <div id="how-it-works" className="space-y-12">
       <div>
-        <div className="inline-block px-5 py-2 rounded-full bg-scallop-blue/10 border border-scallop-blue/20 text-scallop-blue mb-6 shadow-sm">
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-scallop-blue/10 border border-scallop-blue/20 text-scallop-blue mb-6 shadow-sm">
+          <span className="inline-flex items-center justify-center w-6 h-6 rounded-full bg-scallop-blue text-white">
+            <svg
+              className="w-3 h-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M5 13l4 4L19 7"
+              />
+            </svg>
+          </span>
           <span className="text-sm font-semibold">Process</span>
         </div>
         <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-16 tracking-tight leading-[1.1]">How It Works</h2>
@@ -31,9 +46,9 @@ export default function HowItWorks() {
       <div className="space-y-12">
         {steps.map((step, index) => (
           <div key={index} className="flex items-start space-x-6 group">
-            <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-scallop-blue/10 flex items-center justify-center shadow-sm group-hover:bg-scallop-blue transition-all duration-300">
+            <div className="flex-shrink-0 w-16 h-16 rounded-2xl bg-scallop-blue flex items-center justify-center shadow-sm group-hover:bg-scallop-blue/90 transition-all duration-300">
               <svg 
-                className="w-6 h-6 text-scallop-blue group-hover:text-white transition-colors duration-300" 
+                className="w-6 h-6 text-white transition-colors duration-300" 
                 fill="none" 
                 stroke="currentColor" 
                 viewBox="0 0 24 24"

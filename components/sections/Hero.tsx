@@ -7,8 +7,8 @@ import { ambassadorImages } from '@/lib/ambassadorImages';
 
 export default function Hero() {
   const parallaxRef = useParallax(0.3);
-  // Get first two images for hero background
-  const heroImages = ambassadorImages.slice(0, 2);
+  // Get images for hero background: top = image 1, bottom = image 5
+  const heroImages = [ambassadorImages[0], ambassadorImages[4]];
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white py-40">
