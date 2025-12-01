@@ -47,7 +47,7 @@ export default function Hero() {
           Become a Scallop Brand Ambassador
         </h2>
         <p className="text-2xl md:text-3xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
-          Targeting Web3 power users, creators, event hosts and community builders
+          Grow with us and join an exciting journey into real world finance
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link

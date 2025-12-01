@@ -4,12 +4,14 @@ import Image from 'next/image';
 import { ambassadorImages } from '@/lib/ambassadorImages';
 
 export default function WhoYouAre() {
-  // Get an image for this section
-  const sectionImage = ambassadorImages[2]; // Use image 3
+  // Get an image for this section - use one showing multiple people
+  const sectionImage = ambassadorImages[0]; // Use image 1 (or another that shows multiple people)
+
+  const introText = "We look for people who live in Web3 every day and want to bring real utility to their communities. If you enjoy helping others discover better financial tools and you like being part of a growing movement, you will feel at home here.";
 
   const characteristics = [
     {
-      text: 'You live in Web3 and use crypto daily',
+      text: 'You use crypto daily and look for real utility in everyday life',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -17,7 +19,7 @@ export default function WhoYouAre() {
       ),
     },
     {
-      text: 'You look for real world use cases paying in stores, using Uber, buying movie tickets or settling bills',
+      text: 'You enjoy paying in stores, using transport, buying tickets or settling bills with digital assets',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -25,7 +27,7 @@ export default function WhoYouAre() {
       ),
     },
     {
-      text: 'You are tech savvy and enjoy giving honest and practical product feedback',
+      text: 'You are tech minded and enjoy giving clear and honest feedback that helps us improve',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
@@ -33,7 +35,7 @@ export default function WhoYouAre() {
       ),
     },
     {
-      text: 'You are a trendsetter in your community and guide others toward the next big tool',
+      text: 'You are a natural guide in your community and people trust your recommendations',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -41,7 +43,7 @@ export default function WhoYouAre() {
       ),
     },
     {
-      text: 'You have experience hosting small events, meetups or conventions',
+      text: 'You have hosted small meetups or events or you want to start building your own community',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
@@ -49,7 +51,7 @@ export default function WhoYouAre() {
       ),
     },
     {
-      text: 'You want support for sponsorships or community initiatives',
+      text: 'You want support for community activities, sponsorships or collaborations',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -57,7 +59,7 @@ export default function WhoYouAre() {
       ),
     },
     {
-      text: 'You like elevating emerging fintech and blockchain brands',
+      text: 'You enjoy working with emerging fintech and blockchain products that bring real change',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -66,8 +68,8 @@ export default function WhoYouAre() {
     },
   ];
 
-  const importantNote = 'You use our products yourself and do not promote anything blindly';
-  const realUsersNote = 'We want real feedback and real users not generic influencers';
+  const importantNote = 'You use our products yourself and promote only what you genuinely believe in. We want real users and real feedback, not generic influencer activity.';
+  const closingLine = 'If this sounds like you, you are the kind of ambassador we want to grow with.';
 
   return (
     <section className="py-32 px-4 sm:px-6 lg:px-8 bg-scallop-blue relative overflow-hidden">
@@ -96,9 +98,12 @@ export default function WhoYouAre() {
             <div className="inline-block px-5 py-2 rounded-full bg-white/10 border border-white/20 mb-6 shadow-sm">
               <span className="text-sm font-semibold text-white">Ambassador Profile</span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tight leading-[1.1]">
-              Who You Are
+            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-[1.1]">
+              Who you are
             </h2>
+            <p className="text-xl md:text-2xl text-white/90 mb-8 leading-relaxed font-light">
+              {introText}
+            </p>
             <div className="space-y-3 mb-8">
               {characteristics.map((item, index) => (
                 <div
@@ -120,13 +125,13 @@ export default function WhoYouAre() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-bold text-white mb-2 text-lg">Important:</p>
+                  <p className="font-bold text-white mb-2 text-lg">Important</p>
                   <p className="text-white leading-relaxed text-lg">{importantNote}</p>
                 </div>
               </div>
             </div>
-            <div className="mt-6 p-8 bg-white/10 rounded-3xl border border-white/20">
-              <p className="text-white leading-relaxed text-lg italic font-medium">{realUsersNote}</p>
+            <div className="mt-8">
+              <p className="text-white leading-relaxed text-xl font-light">{closingLine}</p>
             </div>
           </div>
         </div>

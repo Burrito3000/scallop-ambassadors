@@ -10,7 +10,7 @@ export default function FeatureCards() {
   const features = [
     {
       title: 'Earn rewards',
-      description: 'Paid events, promos and content tasks',
+      description: 'Get rewarded for events, activations and real community impact',
       bgColor: 'bg-scallop-blue',
       iconBg: 'bg-white/20',
       iconColor: 'text-white',
@@ -23,8 +23,8 @@ export default function FeatureCards() {
       ),
     },
     {
-      title: 'Exclusive drops',
-      description: 'Merch, access, early features',
+      title: 'Exclusive access',
+      description: 'Early product features, limited merch and unique ambassador perks',
       bgColor: 'bg-scallop-blue',
       iconBg: 'bg-white/20',
       iconColor: 'text-white',
@@ -38,7 +38,7 @@ export default function FeatureCards() {
     },
     {
       title: 'Grow your community',
-      description: 'Tools, templates and brand support',
+      description: 'Tools, templates and direct support to build and scale your own community',
       bgColor: 'bg-scallop-blue',
       iconBg: 'bg-white/20',
       iconColor: 'text-white',
@@ -86,8 +86,8 @@ export default function FeatureCards() {
         <div className="space-y-20">
           {featureImages.map((img, idx) => {
             const descriptions = [
-              'Join a global network of creators and community leaders',
-              'Get the tools and support you need to grow your impact',
+              'A diverse group of ambassadors working together to bring real-world finance to communities',
+              'Using Scallop in everyday life - paying at stores, using transport, and settling bills with digital assets',
             ];
             
             return (

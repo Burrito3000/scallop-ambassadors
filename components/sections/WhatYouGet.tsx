@@ -4,12 +4,12 @@ import Image from 'next/image';
 import { ambassadorImages } from '@/lib/ambassadorImages';
 
 export default function WhatYouGet() {
-  // Get an image for this section
-  const sectionImage = ambassadorImages[3]; // Use image 4
+  // Get an image for this section - use one showing woman paying in store
+  const sectionImage = ambassadorImages[4]; // Use image 5 (or another that shows woman paying)
 
   const benefits = [
     {
-      text: 'Access to the Scallop App with multi currency accounts',
+      text: 'Access to the Scallop App with global multi currency accounts',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
@@ -17,7 +17,7 @@ export default function WhatYouGet() {
       ),
     },
     {
-      text: 'Free virtual and physical debit cards',
+      text: 'Free virtual and physical debit cards for everyday spending',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
@@ -25,7 +25,7 @@ export default function WhatYouGet() {
       ),
     },
     {
-      text: 'Zero fee structure for ambassadors',
+      text: 'Zero fee experience for ambassadors',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -33,7 +33,7 @@ export default function WhatYouGet() {
       ),
     },
     {
-      text: 'Custom referral program for community growth',
+      text: 'Tailored referral opportunities designed to grow your community',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
@@ -41,7 +41,7 @@ export default function WhatYouGet() {
       ),
     },
     {
-      text: 'Event support for meetups, workshops or speaking engagements',
+      text: 'Event support for meetups, workshops and community activations',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -49,7 +49,7 @@ export default function WhatYouGet() {
       ),
     },
     {
-      text: 'Crypto rewards for successful contributions',
+      text: 'Crypto rewards based on real impact and meaningful contributions',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -57,7 +57,7 @@ export default function WhatYouGet() {
       ),
     },
     {
-      text: 'Flexible collaboration depending on your region and your goals',
+      text: 'Flexible collaboration built around your region and your personal goals',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -65,7 +65,7 @@ export default function WhatYouGet() {
       ),
     },
     {
-      text: 'Direct communication with our team and access to insider feedback rounds',
+      text: 'Direct contact with our team and access to early product feedback rounds',
       icon: (
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
@@ -88,7 +88,7 @@ export default function WhatYouGet() {
               <span className="text-sm font-semibold">Benefits</span>
             </div>
             <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 tracking-tight leading-[1.1]">
-              What You Get
+              How we empower you as a Scallop Ambassador
             </h2>
             <div className="space-y-3">
               {benefits.map((item, index) => (
