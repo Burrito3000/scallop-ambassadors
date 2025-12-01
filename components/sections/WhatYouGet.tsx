@@ -75,19 +75,19 @@ export default function WhatYouGet() {
   ];
 
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-20 right-10 w-72 h-72 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50"></div>
       <div className="absolute bottom-20 left-10 w-80 h-80 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Content */}
           <div>
             <div className="inline-block px-5 py-2 rounded-full bg-scallop-blue/10 border border-scallop-blue/20 text-scallop-blue mb-6 shadow-sm">
               <span className="text-sm font-semibold">Benefits</span>
             </div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-8 tracking-tight leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 md:mb-8 tracking-tight leading-[1.1]">
               How we empower you as a Scallop Ambassador
             </h2>
             <div className="space-y-3">
@@ -108,7 +108,7 @@ export default function WhatYouGet() {
           {/* Image */}
           <div>
             {sectionImage && (
-              <div className="relative w-full h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-premium-lg">
+              <div className="relative w-full h-[260px] sm:h-[340px] md:h-[500px] md:h-[600px] rounded-3xl overflow-hidden shadow-premium-lg">
                 <Image
                   src={sectionImage.src}
                   alt={sectionImage.title}

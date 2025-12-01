@@ -34,8 +34,8 @@ export default function AmbassadorGallery() {
     };
   };
 
-  // Use only last 4 images for the gallery (images 7, 8, 9, 10)
-  const galleryImages = ambassadorImages.slice(6, 10);
+  // Use only 3 images for the gallery (Ambassadors 7, 8, 9)
+  const galleryImages = ambassadorImages.slice(6, 9);
 
   // Contextual descriptions for gallery images
   const galleryDescriptions = [
@@ -46,22 +46,22 @@ export default function AmbassadorGallery() {
   ];
 
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-10 right-1/4 w-64 h-64 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50 animate-gentle-drift"></div>
       <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50 animate-gentle-drift animation-delay-2000"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div className="inline-block px-5 py-2 rounded-full bg-scallop-blue/10 border border-scallop-blue/20 text-scallop-blue mb-6 shadow-sm">
             <span className="text-sm font-semibold">Community</span>
           </div>
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-16 tracking-tight leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-10 md:mb-16 tracking-tight leading-[1.1]">
             Our Ambassadors
           </h2>
         </div>
         {/* Spread images out with large gaps, varied sizes, and text content */}
-        <div className="space-y-20">
+        <div className="space-y-14 md:space-y-20">
           {galleryImages.map((img, idx) => {
             // Varied sizes: alternating large and medium, with offset positioning
             const isLarge = idx % 2 === 0;
@@ -72,11 +72,11 @@ export default function AmbassadorGallery() {
               ? 'md:ml-auto' 
               : '';
             const heightClass = isLarge 
-              ? 'h-[500px] md:h-[650px]' 
-              : 'h-[450px] md:h-[550px]';
+              ? 'h-[260px] sm:h-[360px] md:h-[650px]' 
+              : 'h-[220px] sm:h-[320px] md:h-[550px]';
             
             return (
-              <div key={img.id} className="space-y-6">
+              <div key={img.id} className="space-y-4 md:space-y-6">
                 {/* Image */}
                 <div
                   className={`relative group ${widthClass} ${heightClass} ${offsetClass} rounded-3xl overflow-hidden shadow-premium-lg animate-gentle-drift`}
@@ -90,11 +90,6 @@ export default function AmbassadorGallery() {
                     fill
                     className="object-cover"
                     sizes={isLarge ? "(max-width: 768px) 100vw, 80vw" : "(max-width: 768px) 100vw, 60vw"}
-                  />
-                  <div
-                    className={`absolute inset-0 bg-gradient-to-t from-white/90 via-white/50 to-transparent transition-all duration-300 ${
-                      hoveredId === img.id ? 'opacity-100' : 'opacity-0'
-                    }`}
                   />
                   <div
                     className={`absolute bottom-0 left-0 right-0 p-6 transition-all duration-300 ${

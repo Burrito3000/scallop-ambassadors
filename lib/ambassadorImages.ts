@@ -65,7 +65,7 @@ export const ambassadorImages: AmbassadorImage[] = [
   },
   {
     id: '9',
-    src: '/images/ambassadors/9.jpg',
+    src: '/images/ambassadors/6.jpg',
     title: 'Ambassador 9',
     layout: 'square', // Bottom row
     position: 9,

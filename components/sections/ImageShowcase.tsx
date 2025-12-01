@@ -30,14 +30,14 @@ export default function ImageShowcase({ images, layout = 'grid', columns = 3 }: 
   ];
 
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-1/4 right-0 w-64 h-64 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50 -mr-32"></div>
       <div className="absolute bottom-1/4 left-0 w-56 h-56 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50 -ml-28"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
         {/* Spread images out individually with large gaps, varied sizes, and text content */}
-        <div className="space-y-20">
+        <div className="space-y-14 md:space-y-20">
           {images.map((img, idx) => {
             // Varied sizes: first full-width, others offset and smaller
             const isFullWidth = idx === 0;
@@ -47,11 +47,11 @@ export default function ImageShowcase({ images, layout = 'grid', columns = 3 }: 
                 ? 'w-full md:w-2/3 md:ml-auto' 
                 : 'w-full md:w-2/3';
             const heightClass = isFullWidth 
-              ? 'h-[500px] md:h-[600px]' 
-              : 'h-[400px] md:h-[500px]';
+              ? 'h-[260px] sm:h-[360px] md:h-[500px]' 
+              : 'h-[220px] sm:h-[320px] md:h-[500px]';
             
             return (
-              <div key={img.id} className="space-y-6">
+              <div key={img.id} className="space-y-4 md:space-y-6">
                 {/* Image */}
                 <div
                   className={`relative group ${widthClass} ${heightClass} rounded-3xl overflow-hidden shadow-premium-lg animate-gentle-drift mx-auto`}

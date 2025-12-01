@@ -53,19 +53,19 @@ export default function FeatureCards() {
   ];
 
   return (
-    <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
+    <section className="py-20 md:py-32 px-4 sm:px-6 lg:px-8 bg-white relative overflow-hidden">
       {/* Decorative background elements */}
       <div className="absolute top-10 right-1/4 w-64 h-64 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50 animate-gentle-drift"></div>
       <div className="absolute bottom-20 left-1/4 w-72 h-72 bg-scallop-blue/10 rounded-full filter blur-3xl opacity-50 animate-gentle-drift animation-delay-2000"></div>
       
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <div className="inline-block px-5 py-2 rounded-full bg-scallop-blue/10 border border-scallop-blue/20 text-scallop-blue mb-6 shadow-sm">
             <span className="text-sm font-semibold">Program Benefits</span>
           </div>
         </div>
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-16 md:mb-24">
           {features.map((feature, index) => (
             <div
               key={index}
@@ -82,40 +82,47 @@ export default function FeatureCards() {
           ))}
         </div>
         
-        {/* Images - Spread out with varied sizes, large gaps, and text content */}
-        <div className="space-y-20">
-          {featureImages.map((img, idx) => {
-            const descriptions = [
-              'A diverse group of ambassadors working together to bring real-world finance to communities',
-              'Using Scallop in everyday life - paying at stores, using transport, and settling bills with digital assets',
-            ];
-            
-            return (
-              <div key={img.id} className="space-y-6">
-                <div
-                  className={`relative group rounded-3xl overflow-hidden shadow-premium-lg transition-transform duration-300 hover:scale-[1.02] ${
-                    idx === 0 
-                      ? 'w-full h-[500px] md:h-[600px]' 
-                      : 'w-full md:w-3/4 mx-auto h-[400px] md:h-[500px]'
-                  }`}
-                >
-                  <Image
-                    src={img.src}
-                    alt={img.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
-                    sizes={idx === 0 ? "100vw" : "(max-width: 768px) 100vw, 75vw"}
-                  />
-                </div>
-                {/* Text content below image */}
-                <div className={`${idx === 0 ? 'w-full' : 'w-full md:w-3/4 mx-auto'} text-center`}>
-                  <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
-                    {descriptions[idx]}
-                  </p>
-                </div>
+        {/* Images - Asymmetric layout with varied sizes, large gaps, and text content */}
+        <div className="space-y-14 md:space-y-0 md:grid md:grid-cols-2 md:gap-10 items-stretch">
+          {/* Primary image - large, anchoring the left side */}
+          {featureImages[0] && (
+            <div className="space-y-4 md:space-y-6">
+              <div className="relative group w-full h-[260px] sm:h-[340px] md:h-[520px] rounded-3xl overflow-hidden shadow-premium-lg transition-transform duration-300 hover:scale-[1.02]">
+                <Image
+                  src={featureImages[0].src}
+                  alt={featureImages[0].title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
               </div>
-            );
-          })}
+              <div className="w-full text-center">
+                <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
+                  A diverse group of ambassadors working together to bring real-world finance to communities.
+                </p>
+              </div>
+            </div>
+          )}
+
+          {/* Secondary image - slightly smaller, offset on desktop for an aesthetic staggered look */}
+          {featureImages[1] && (
+            <div className="space-y-4 md:space-y-6 flex flex-col justify-center">
+              <div className="relative group w-full md:w-4/5 md:ml-auto h-[220px] sm:h-[320px] md:h-[420px] rounded-3xl overflow-hidden shadow-premium-lg transition-transform duration-300 hover:scale-[1.02]">
+                <Image
+                  src={featureImages[1].src}
+                  alt={featureImages[1].title}
+                  fill
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                />
+              </div>
+              <div className="w-full md:w-4/5 md:ml-auto text-center">
+                <p className="text-xl md:text-2xl text-gray-600 leading-relaxed font-light">
+                  Using Scallop in everyday life – paying in stores, using transport, and settling bills with digital assets.
+                </p>
+              </div>
+            </div>
+          )}
         </div>
       </div>
     </section>

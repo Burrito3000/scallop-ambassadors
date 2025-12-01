@@ -11,9 +11,12 @@ export default function Hero() {
   const heroImages = [ambassadorImages[0], ambassadorImages[4]];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white py-40">
-      {/* Background Ambassador Images - Large and Spread Out */}
-      <div className="absolute inset-0 opacity-15 pointer-events-none">
+    <section
+      ref={parallaxRef}
+      className="relative min-h-screen flex items-center justify-center overflow-hidden bg-white py-32 md:py-40"
+    >
+      {/* Background Ambassador Images - Large and Spread Out (desktop & tablet only) */}
+      <div className="absolute inset-0 opacity-15 pointer-events-none hidden md:block">
         {heroImages[0] && (
           <div className="absolute top-32 right-20 w-96 h-[600px] rounded-3xl overflow-hidden shadow-premium-lg">
             <Image
@@ -39,14 +42,14 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-32 pb-32">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold text-gray-900 mb-8 leading-[1.05] tracking-[-0.02em]">
+      <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 pb-24 md:pt-32 md:pb-32">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-gray-900 mb-6 md:mb-8 leading-[1.05] tracking-[-0.02em]">
           We are looking for you
         </h1>
-        <h2 className="text-4xl md:text-6xl lg:text-7xl font-semibold text-gray-800 mb-8 leading-[1.1] tracking-tight">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-800 mb-6 md:mb-8 leading-[1.1] tracking-tight">
           Become a Scallop Brand Ambassador
         </h2>
-        <p className="text-2xl md:text-3xl text-gray-600 mb-16 max-w-4xl mx-auto leading-relaxed font-light">
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-600 mb-10 md:mb-16 max-w-4xl mx-auto leading-relaxed font-light">
           Grow with us and join an exciting journey into real world finance
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
