@@ -50,6 +50,25 @@ export default function FeatureCards() {
         </svg>
       ),
     },
+    {
+      title: 'Refer friends',
+      description: 'Invite new Scallop app users and earn rewards for every successful referral',
+      bgColor: 'bg-scallop-blue',
+      iconBg: 'bg-white/20',
+      iconColor: 'text-white',
+      textColor: 'text-white',
+      descriptionColor: 'text-white/90',
+      icon: (
+        <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M18 9a3 3 0 11-6 0 3 3 0 016 0zM6 9a3 3 0 116 0 3 3 0 01-6 0zm12 6a4 4 0 00-3.8 2.8M9.8 17.8A4 4 0 006 15a4 4 0 00-4 4v1h20v-1a4 4 0 00-4-4z"
+          />
+        </svg>
+      ),
+    },
   ];
 
   return (
@@ -65,7 +84,7 @@ export default function FeatureCards() {
           </div>
         </div>
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 mb-16 md:mb-24">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-10 mb-16 md:mb-24">
           {features.map((feature, index) => (
             <div
               key={index}
