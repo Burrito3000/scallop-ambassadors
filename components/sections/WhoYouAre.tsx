@@ -125,7 +125,7 @@ export default function WhoYouAre() {
                   </svg>
                 </div>
                 <div>
-                  <p className="font-bold text-white mb-2 text-lg">Important</p>
+                  <p className="font-bold text-white mb-2 text-lg">But what matters most to us</p>
                   <p className="text-white leading-relaxed text-lg">{importantNote}</p>
                 </div>
               </div>
