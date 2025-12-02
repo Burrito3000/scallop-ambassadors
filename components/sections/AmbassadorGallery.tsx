@@ -34,12 +34,11 @@ export default function AmbassadorGallery() {
     };
   };
 
-  // Use only 3 images for the gallery (Ambassadors 7, 8, 9)
-  const galleryImages = ambassadorImages.slice(6, 9);
+  // Use only 2 images for the gallery (Ambassadors 8, 9)
+  const galleryImages = ambassadorImages.slice(7, 9);
 
   // Contextual descriptions for gallery images
   const galleryDescriptions = [
-    '',
     'Real people using Scallop in their daily lives',
     'Community leaders driving Web3 adoption',
   ];
